@@ -2,7 +2,7 @@ $ = jQuery.noConflict();
 
 $(document).ready(function(){
 
-  // Ocultar y mostrar menu
+  // Ocultar y mostrar menu   
   $('.mobile-menu a').on('click', function(event) {
     $('nav.menu-sitio').toggle('slow');
 
