@@ -10,11 +10,13 @@ function lapizzeria_styles(){
 
   // Registrando los estilos
   wp_register_style('normalize', $src = get_template_directory_uri() . '/css/normalize.css', $deps = array(), $ver = 'v7.0.0' );
+  wp_register_style('google_fonts', $src = 'https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700,900', $deps = array(), $ver = 'v1.0.0');
   wp_register_style('fontawesome', $src = get_template_directory_uri() . '/css/font-awesome.min.css', $deps = array('normalize'), $ver = 'v4.7.0' );
   wp_register_style('style', $src = get_template_directory_uri() . '/style.css', $deps = array('normalize'), $ver = 'v1.0' );
 
   // Llamando a los estilos
   wp_enqueue_style('normalize');
+  wp_enqueue_style('google_fonts');
   wp_enqueue_style('fontawesome');
   wp_enqueue_style('style');
 
