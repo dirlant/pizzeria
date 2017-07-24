@@ -28,6 +28,12 @@ h2{ font-size: 40px;}
 h3{ font-size: 28px;}
 h4{ font-size: 24px;}
 
+.clear,
+.clear::after{
+  content: '';
+  clear: both;
+  display: block;
+}
 *, *:before, *:after{
   box-sizing: inherit;
 }
@@ -303,4 +309,37 @@ footer p{
 }
 footer .copyright{
   margin-top: 20px;
+}
+
+/* Nosotros */
+div.informacion-cajas > div {
+  text-align: center;
+}
+div.informacion-cajas > div img {
+  width: 100%;
+}
+@media only screen and (min-width:480px) {
+  div.informacion-cajas > div {
+    width: 50%;
+    float: left;
+  }
+  div.informacion-cajas > div:last-child{
+    width: 100%;
+  }
+}
+@media only screen and (min-width:768px) {
+  div.informacion-cajas > div,
+  div.informacion-cajas > div:last-child {
+    width: 33.3%;
+    float: left;
+  }
+}
+
+div.contenido-cajas {
+  padding: 20px 5px 5px 5px;
+}
+@media only screen and (min-width:992px) {
+  div.contenido-cajas{
+    padding: 50px 0;
+  }
 }
