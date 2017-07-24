@@ -21,8 +21,6 @@
 
     <div class="informacion-cajas contenedor clear">
 
-      <pre><?php echo get_field('color1') ?></pre>
-
       <div class="cajas">
         <?php
          $id_imagen  = get_field('imagen');
@@ -31,14 +29,14 @@
 
         <img src="<?php echo $imagen[0] ?>" class="caja-imagen">
 
-        <div class="contenido-cajas" style="background-color: <?php echo get_field('color1') ?>">
+        <div class="contenido-caja" style="background-color: <?php echo get_field('color1') ?>; color: <?php echo get_field('color_texto') ?>">
           <?php the_field('descripcion') ?>
         </div>
       </div>
 
 
       <div class="cajas">
-        <div class="contenido-cajas" style="background-color: <?php echo get_field('color1') ?>">
+        <div class="contenido-caja" style="background-color: <?php echo get_field('color1') ?>; color: <?php echo get_field('color_texto') ?>">
           <?php the_field('descripcion2') ?>
         </div>
 
@@ -59,7 +57,7 @@
 
         <img src="<?php echo $imagen[0] ?>" class="caja-imagen">
 
-        <div class="contenido-cajas" style="background-color: <?php echo get_field('color1') ?>">
+        <div class="contenido-caja" style="background-color: <?php echo get_field('color_background') ?>; color: <?php echo get_field('color_texto') ?>">
           <?php the_field('descripcion3') ?>
         </div>
       </div>
