@@ -1,0 +1,199 @@
+/*
+Theme Name: La Pizzeria
+Theme URI:
+Author: Diego Carciente
+Author URI:
+Description: Theme para sitio web de restaurante o pizza
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/license/gpl-2.0.html
+Tags: Restaurant, mobile, first, responsive, pizza
+Text Domain: lapizzeria.
+*/
+
+html{
+  box-sizing: border-box;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+.contenedor{
+  max-width: 1100px;
+  width: 100%;
+  margin: 0px auto;
+}
+
+/* Encabezado */
+header.encabezado-sitio{
+  border-bottom: 1px solid #c1c1c1;
+  padding-bottom: 30px;
+}
+div.logo{
+  text-align: center;
+}
+img.logotipo{
+  width: 250px;
+}
+
+@media only screen and (min-width: 768px) {
+  div.logo{
+    text-align: left;
+  }
+
+  header.encabezado-sitio .contenedor{
+    position: relative;
+  }
+
+  .informacion-encabezados{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+}
+
+div.direccion {
+  display: block;
+  clear: both;
+  padding-top: 10px;
+}
+
+div.direccion p {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+@@media only screen and (min-width:768px) {
+  div.direccion p{
+    text-align: right;
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+  div.logo{
+    text-align: center;
+  }
+}
+
+/* Menu de las redes sociales */
+
+nav.sociales ul{
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+
+@@media only screen and (min-width:768px) {
+  nav.sociales{
+    float: left;
+  }
+}
+
+.sr-text{
+  display: none;
+}
+nav.sociales ul li{
+  position: relative;
+  display: inline-block;
+}
+
+nav.sociales ul li a::before{
+  font-family: 'FontAwesome';
+  display: inline-block;
+  vertical-align: top;
+  padding: 0px 5px;
+  content: '\f08e';
+  font-size: 30px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+nav.sociales li a[href*="facebook.com"]::before{
+  content: '\f09a'
+}
+
+nav.sociales li a[href*="twitter.com"]::before{
+  content: '\f099'
+}
+
+nav.sociales li a[href*="instagram.com"]::before{
+  content: '\f16d'
+}
+
+nav.sociales li a[href*="pinterest.com"]::before{
+  content: '\f231'
+}
+
+nav.sociales li a[href*="youtube.com"]::before{
+  content: '\f16a'
+}
+
+
+/* Navegacion principal */
+nav.menu-sitio {
+  display: none;
+}
+@media only screen and (min-width:768px) {
+  nav.menu-sitio {
+    display: block;
+  }
+}
+nav.menu-sitio  ul {
+  list-style: none;
+  display: table;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+nav.menu-sitio ul li a{
+  text-align: center;
+  padding: 20px 0;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+nav.menu-sitio ul li.current_page_item a{
+  border-bottom: 5px solid #e25a51;
+}
+
+nav.menu-sitio ul li a:hover{
+  background: #e88217;
+  border-bottom: 5px solid #e25a51;
+}
+
+@media only screen and (min-width:768px) {
+  nav.menu-sitio  ul li {
+    display: table-cell;
+    width: 1%;
+  }
+}
+
+/* Responsive Menu */
+@media only screen and (max-width:767px) {
+  .mobile-menu a {
+    height: 40px;
+    background-color: #e25a51;
+    width: 100%;
+    color: white !important;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .mobile-menu a {
+    display: none;
+  }
+}
