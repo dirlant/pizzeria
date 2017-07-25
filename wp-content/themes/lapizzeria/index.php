@@ -55,8 +55,10 @@
 
           <?php endwhile; ?>
         </main>
+        <div class="columnas1-3">
+          <?php get_sidebar( 'blog_sidebar' ) ?>  
+        </div>
 
-        <?php get_sidebar( 'blog_sidebar' ) ?>
       </div>
     </div>
 

@@ -140,7 +140,8 @@ nav.sociales ul{
   }
 }
 
-.sr-text{
+.sr-text,
+.screen-reader-text {
   display: none;
 }
 nav.sociales ul li{
@@ -483,4 +484,37 @@ p.autor i {
 div.contenido-entrada p {
   margin-bottom: 0;
   line-height: 24px;
+}
+
+
+/* Side bar */
+form.searchform {
+  position: relative;
+}
+form.searchform #searchsubmit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42px;
+  height: 42px;
+  background-color: rgb(178, 173, 180);
+  text-indent: -9999px;
+  background-image: url(img/buscador.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+  cursor: pointer;
+}
+
+form.searchform input {
+  width: 100%;
+  padding: 10px;
+}
+aside .widget {
+  margin-bottom: 20px;
+}
+aside .widget h2{
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
 }
