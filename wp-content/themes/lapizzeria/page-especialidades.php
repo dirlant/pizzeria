@@ -31,25 +31,30 @@
   <div class="nuestras-especialidades contenedor">
     <h3 class="">Pizzas</h3>
 
-    <?php
-      $args = array(
-        'post_type' => 'pizzas',
-        'posts_per_page' => -1,
-        'order_by' => 'title',
-        'order' => 'ASC',
-        'category_name' => 'pizzas'
-      );
-      $pizzas = new WP_Query($args);
-    ?>
+    <div class="contenedor-grid">
+      <?php
+        $args = array(
+          'post_type' => 'pizzas',
+          'posts_per_page' => -1,
+          'order_by' => 'title',
+          'order' => 'ASC',
+          'category_name' => 'pizzas'
+        );
+        $pizzas = new WP_Query($args);
+      ?>
 
-    <?php while($pizzas->have_posts()): $pizzas->the_post(); ?>
 
-      <ul>
-        <li><?php the_title() ?></li>
-      </ul>
+      <?php while($pizzas->have_posts()): $pizzas->the_post(); ?>
+        <div class="">
+          <?php the_post_thumbnail( $size = 'especialidades' ) ?>
 
-    <?php endwhile; wp_reset_postdata(); ?>
+          <div class="texto-especialidad">
+            <h4><?php the_title(); ?> <span>$<?php the_field('precio') ?></span></h4>
+            <?php the_content(); ?>
+          </div>
 
+      <?php endwhile; wp_reset_postdata(); ?>
+    </div>
   </div>
 
 <?php get_footer() ?>

@@ -3,6 +3,7 @@
 function lapizzeria_setup(){
   add_theme_support( 'post-thumbnails' );
   add_image_size( 'nosotros', $width = 437, $height = 291, $crop = true );
+  add_image_size( 'especialidades', $width = 768, $height = 515, $crop = true );
 }
 
 add_action( 'after_setup_theme', 'lapizzeria_setup');
