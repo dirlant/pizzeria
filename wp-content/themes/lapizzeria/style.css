@@ -65,7 +65,9 @@ div.logo{
 img.logotipo{
   width: 250px;
 }
-.button {
+.button,
+div.comentarios form input[type='submit'] {
+  background-color: rgb(203, 53, 26);
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   width: auto;
@@ -76,6 +78,7 @@ img.logotipo{
   display: inline-block;
   text-decoration: none;
   transition: background-color  .5s ease;
+  cursor: pointer;
 }
 .button.rojo {
   background: rgb(203, 53, 26);
@@ -208,7 +211,8 @@ nav.menu-sitio ul li a{
   color: #000000;
 }
 
-nav.menu-sitio ul li.current_page_item a{
+nav.menu-sitio ul li.current_page_item a,
+nav.menu-sitio ul li.current_page_parent a{
   border-bottom: 5px solid #e25a51;
 }
 
@@ -535,4 +539,40 @@ aside .widget ul li a {
 }
 aside .widget ul li a:hover {
   color:  rgb(241, 176, 100);
+}
+
+/* Comentarios */
+div.comentarios h3 {
+  font-weight: 700;
+  text-align: center;
+}
+
+@media only screen and (min-width:992px) {
+  div.comentarios {
+    width: 60%;
+  }
+}
+div.comment-respond {
+  text-align: center;
+}
+div.comentarios form label {
+  width: 200px;
+  display: inline-block;
+  text-align: right;
+  padding-right: 20px;
+  font-weight: 300;
+}
+div.comentarios form input,
+div.comentarios form textarea {
+  padding: 10px;
+  width: calc(100% - 220px);
+}
+div.comentarios form input[type='submit'] {
+  margin: auto;
+  display: inline-block;
+  border: none;
+}
+p.logged-in-as a {
+  text-decoration: none;
+  color: #000000;
 }
