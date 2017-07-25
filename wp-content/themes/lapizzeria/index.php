@@ -18,7 +18,6 @@
   </div>
 
 
-
     <div class="principal contenedor">
       <div class="contenedor-grid">
         <main class="columnas2-3 contenido-paginas">
@@ -55,17 +54,11 @@
 
           <?php endwhile; ?>
         </main>
-        <div class="columnas1-3">
-          <?php get_sidebar( 'blog_sidebar' ) ?>  
-        </div>
+        <main class="columnas1-3">
+          <?php get_sidebar( 'blog_sidebar' ) ?>
+        </main>
 
       </div>
     </div>
-
-
-
-
-
-
 
 <?php get_footer() ?>

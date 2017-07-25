@@ -488,6 +488,9 @@ div.contenido-entrada p {
 
 
 /* Side bar */
+aside.sidebar {
+  margin-top: 10px;
+}
 form.searchform {
   position: relative;
 }
@@ -517,4 +520,19 @@ aside .widget h2{
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
+}
+aside .widget ul {
+  list-style: none;
+}
+aside .widget ul li {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+aside .widget ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+
+}
+aside .widget ul li a:hover {
+  color:  rgb(241, 176, 100);
 }
