@@ -29,7 +29,7 @@
 
 
   <div class="nuestras-especialidades contenedor">
-    <h3 class="">Pizzas</h3>
+    <h3 class="texto-rojo">Pizzas</h3>
 
     <div class="contenedor-grid">
       <?php
@@ -44,17 +44,20 @@
       ?>
 
 
+
       <?php while($pizzas->have_posts()): $pizzas->the_post(); ?>
-        <div class="">
+
+        <div class="columnas1-3">
           <?php the_post_thumbnail( $size = 'especialidades' ) ?>
 
           <div class="texto-especialidad">
             <h4><?php the_title(); ?> <span>$<?php the_field('precio') ?></span></h4>
             <?php the_content(); ?>
           </div>
+        </div>
 
       <?php endwhile; wp_reset_postdata(); ?>
+
     </div>
-  </div>
 
 <?php get_footer() ?>
