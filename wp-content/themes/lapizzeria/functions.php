@@ -87,4 +87,21 @@ function lapizzeria_especialidades() {
 	register_post_type( 'pizzas', $args );
 
 }
+
+
+// Widget
+
+function lapizzeria_widgets() {
+    register_sidebar( $args = array(
+      'name' => 'Blog Sidebar',
+      'id' => 'blog_sidebar',
+      'before_widget' => '<div class="widget">',
+      'after_widget' => '</div>',
+      'befor_title' => '<h3>',
+      'after_title' => '</h3>'
+
+    ));
+}
+
+add_action( 'widgets_init', 'lapizzeria_widgets')
 ?>
