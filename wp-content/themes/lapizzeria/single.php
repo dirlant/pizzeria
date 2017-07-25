@@ -22,8 +22,23 @@
   <?php endwhile; ?>
 
   <div class="contenedor comentarios">
-
     <?php comment_form() ?>
+  </div>
+  <div class="contenedor">
+    <h3 class="texto-centrado"> Comentarios </h3>
+    <ul class="lista-comentarios">
+      <?php
+        $comentarios =  get_comments( array(
+          'post_id' => $post->ID,
+          'status' => 'approve'
+        ));
+
+        wp_list_comments( $args = array(
+          'per_page' => 10,
+          'reverse_top_level' => false,
+        ), $comentarios);
+      ?>
+    </ul>
 
   </div>
 

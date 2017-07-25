@@ -576,3 +576,33 @@ p.logged-in-as a {
   text-decoration: none;
   color: #000000;
 }
+.comment-author img {
+  width: 40px;
+}
+ul.lista-comentarios,
+ul.lista-comentarios {
+  list-style: none;
+}
+ul.lista-comentarios li.comment {
+  background-color: rgb(233, 233, 233);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+ul.lista-comentarios li.comment cite {
+  color: rgb(9, 9, 9);
+  font-weight: 900;
+  font-size: 18px;
+}
+ul.lista-comentarios li.comment .comment-author {
+  margin-bottom: 20px;
+}
+
+ul.lista-comentarios li.comment a {
+  text-decoration: none;
+  color: #e39929;
+}
+ul.lista-comentarios li.comment ul.children li {
+  list-style: none;
+  background-color: rgb(251, 249, 250);
+  margin-top: 20px;
+}
