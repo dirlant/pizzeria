@@ -24,7 +24,31 @@
         <?php while (have_posts()): the_post(); ?>
 
           <article class="entrada-blog">
-            <?php the_title(); ?>
+            <a href="<?php the_permalink() ?>">
+              <?php the_post_thumbnail( $size = 'espacialidades' )?>
+            </a>
+            <header class="informacion-entrada clear">
+              <div class="fecha">
+                <time>
+                  <?php echo the_time( $d = 'd' ) ?>
+                  <span> <?php the_time( $d = 'M' ) ?></span>
+                </time>
+
+              </div>
+              <div class="titulo-entrada">
+                <h2><?php the_title() ?></h2>
+                <p class="autor">
+                  <i class="fa fa-user" aria-hidden="true"><?php the_author() ?></i>
+                </p>
+
+              </div>
+
+            </header>
+            <div class="contenido-entrada">
+              <?php the_excerpt() ?>
+              <a href="<?php the_permalink() ?>" class="button rojo"> Leer mas</a>
+
+            </div>
           </article>
 
         <?php endwhile; ?>
