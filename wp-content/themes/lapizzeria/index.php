@@ -20,39 +20,42 @@
 
 
     <div class="principal contenedor">
-      <main class="texto-centrado contenido-paginas">
-        <?php while (have_posts()): the_post(); ?>
+      <div class="contenedor-grid">
+        <main class="columnas2-3 contenido-paginas">
+          <?php while (have_posts()): the_post(); ?>
 
-          <article class="entrada-blog">
-            <a href="<?php the_permalink() ?>">
-              <?php the_post_thumbnail( $size = 'espacialidades' )?>
-            </a>
-            <header class="informacion-entrada clear">
-              <div class="fecha">
-                <time>
-                  <?php echo the_time( $d = 'd' ) ?>
-                  <span> <?php the_time( $d = 'M' ) ?></span>
-                </time>
+            <article class="entrada-blog">
+              <a href="<?php the_permalink() ?>">
+                <?php the_post_thumbnail( $size = 'espacialidades' )?>
+              </a>
+              <header class="informacion-entrada clear">
+                <div class="fecha">
+                  <time>
+                    <?php echo the_time( $d = 'd' ) ?>
+                    <span> <?php the_time( $d = 'M' ) ?></span>
+                  </time>
+
+                </div>
+                <div class="titulo-entrada">
+                  <h2><?php the_title() ?></h2>
+                  <p class="autor">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <?php the_author() ?>
+                  </p>
+
+                </div>
+
+              </header>
+              <div class="contenido-entrada">
+                <?php the_excerpt() ?>
+                <a href="<?php the_permalink() ?>" class="button rojo"> Leer mas</a>
 
               </div>
-              <div class="titulo-entrada">
-                <h2><?php the_title() ?></h2>
-                <p class="autor">
-                  <i class="fa fa-user" aria-hidden="true"><?php the_author() ?></i>
-                </p>
+            </article>
 
-              </div>
-
-            </header>
-            <div class="contenido-entrada">
-              <?php the_excerpt() ?>
-              <a href="<?php the_permalink() ?>" class="button rojo"> Leer mas</a>
-
-            </div>
-          </article>
-
-        <?php endwhile; ?>
-      </main>
+          <?php endwhile; ?>
+        </main>
+      </div>
     </div>
 
 
