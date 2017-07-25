@@ -55,8 +55,12 @@
 
           <?php endwhile; ?>
         </main>
+
+        <?php get_sidebar( 'blog_sidebar' ) ?>
       </div>
     </div>
+
+
 
 
 
