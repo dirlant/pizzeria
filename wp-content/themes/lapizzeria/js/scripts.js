@@ -23,6 +23,10 @@ $(document).ready(function(){
   // Ajustar cajas segun tamaño de la imagen
   ajustarCajas();
 
+
+  // Fluidbox
+  $('.gallery a').fluidbox();
+
 })
 
 function ajustarCajas(){
