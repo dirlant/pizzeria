@@ -19,21 +19,21 @@
 
         <form class="reserva-contacto" method="post">
           <h2>Realiza una reservación</h2>
-          
+
           <div class="campo">
-            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="nombre" placeholder="Nombre">
           </div>
           <div class="campo">
-            <input type="datetime-local" name="fecha" placeholder="Fecha" required>
+            <input type="datetime-local" name="fecha" placeholder="Fecha">
           </div>
           <div class="campo">
-            <input type="email" name="correo" placeholder="Correo" required>
+            <input type="email" name="correo" placeholder="Correo">
           </div>
           <div class="campo">
-            <input type="telf" name="telefono" placeholder="Telefono" required>
+            <input type="telf" name="telefono" placeholder="Telefono">
           </div>
           <div class="campo">
-            <textarea name="mensaje" rows="8" cols="80" placeholder="Mensaje" required></textarea>
+            <textarea name="mensaje" rows="8" cols="80" placeholder="Mensaje"></textarea>
           </div>
 
           <input type="submit" name="enviar" class="button">

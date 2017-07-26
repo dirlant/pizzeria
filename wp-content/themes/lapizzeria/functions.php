@@ -1,6 +1,7 @@
 <?php
 
-require_once dirname( __FILE__ ) . '/inc/database.php';
+require_once dirname( __FILE__ ) . '/inc/database.php'; // tablas de las reservaciones
+require_once dirname( __FILE__ ) . '/inc/reservaciones.php'; // acciones a las reservaciones 
 
 function lapizzeria_setup(){
   add_theme_support( 'post-thumbnails' );
