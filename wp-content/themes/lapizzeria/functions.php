@@ -1,5 +1,7 @@
 <?php
 
+require_once dirname( __FILE__ ) . '/inc/database.php';
+
 function lapizzeria_setup(){
   add_theme_support( 'post-thumbnails' );
   add_image_size( 'nosotros', $width = 437, $height = 291, $crop = true );
