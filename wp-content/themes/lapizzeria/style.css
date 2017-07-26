@@ -606,3 +606,22 @@ ul.lista-comentarios li.comment ul.children li {
   background-color: rgb(251, 249, 250);
   margin-top: 20px;
 }
+
+/* Paginacion */
+.paginacion {
+  margin-top: 20px;
+  background-color: rgb(234, 235, 231);
+  padding: 20px;
+  display: inline-block;
+}
+
+.paginacion a {
+  text-decoration: none;
+}
+.paginacion a:hover {
+  text-decoration: underline;
+}
+.paginacion span.current{
+  font-weight: 900;
+  color: rgb(242, 16, 16);
+}

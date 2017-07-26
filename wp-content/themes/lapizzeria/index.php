@@ -53,6 +53,11 @@
             </article>
 
           <?php endwhile; ?>
+
+          <div class="paginacion">
+            <?php echo paginate_links( ) ?>
+          </div>
+
         </main>
         <main class="columnas1-3">
           <?php get_sidebar( 'blog_sidebar' ) ?>
