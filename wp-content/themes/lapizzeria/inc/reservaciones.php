@@ -2,7 +2,6 @@
 
 function lapizzeria_guardar(){
   global $wpdb;
-  $tabla = $wpdb->prefix . 'reservaciones';
 
   if (isset($_POST['enviar'])):
 
@@ -11,6 +10,8 @@ function lapizzeria_guardar(){
     $correo = sanitize_text_field( $_POST['correo']);
     $telefono = sanitize_text_field( $_POST['telefono']);
     $mensaje = sanitize_text_field( $_POST['mensaje']);
+
+    $tabla = $wpdb->prefix . 'reservaciones';
 
     $datos = array(
       'nombre' => $nombre,
@@ -29,6 +30,11 @@ function lapizzeria_guardar(){
     );
 
     $wpdb->insert($tabla, $datos, $formato);
+
+    $url = get_page_by_title( 'Gracias');
+    wp_redirect(get_permalink($url->ID));
+
+    exit();
 
   endif;
 
