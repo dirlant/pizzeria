@@ -12,6 +12,7 @@ function lapizzeria_opciones(){
 }
 
 function lapizzeria_reservaciones(){
-
+  include 'reservaciones_template.php';
 }
+
 ?>
