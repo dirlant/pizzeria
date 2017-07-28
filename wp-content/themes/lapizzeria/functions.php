@@ -1,7 +1,7 @@
 <?php
 
 require_once dirname( __FILE__ ) . '/inc/database.php'; // tablas de las reservaciones
-require_once dirname( __FILE__ ) . '/inc/reservaciones.php'; // acciones a las reservaciones 
+require_once dirname( __FILE__ ) . '/inc/reservaciones.php'; // acciones a las reservaciones
 
 function lapizzeria_setup(){
   add_theme_support( 'post-thumbnails' );
@@ -40,9 +40,6 @@ function lapizzeria_styles(){
 add_action( 'wp_enqueue_scripts', 'lapizzeria_styles');
 
 // Creacion de menus disponibles
-
-add_action( 'init', 'lapizzeria_menus' );
-
 function lapizzeria_menus(){
   register_nav_menus( $locations = array(
     'header-menu' => __('Header Menu', 'lapizzeria'),
@@ -50,6 +47,9 @@ function lapizzeria_menus(){
 
   ));
 }
+
+add_action( 'init', 'lapizzeria_menus' );
+
 
 // Post custom field, para que aparezca en el menu de wordpress
 add_action( 'init', 'lapizzeria_especialidades' );

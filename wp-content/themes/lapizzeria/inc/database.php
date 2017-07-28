@@ -59,4 +59,6 @@ function lapizzeria_database(){
 add_action( 'after_setup_theme', 'lapizzeria_database');
 
 
+
+
 ?>
