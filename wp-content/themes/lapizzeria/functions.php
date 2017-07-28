@@ -2,6 +2,7 @@
 
 require_once dirname( __FILE__ ) . '/inc/database.php'; // tablas de las reservaciones
 require_once dirname( __FILE__ ) . '/inc/reservaciones.php'; // acciones a las reservaciones
+require_once dirname( __FILE__ ) . '/inc/opciones.php'; // opciones del archivo
 
 function lapizzeria_setup(){
   add_theme_support( 'post-thumbnails' );
